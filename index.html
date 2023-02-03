@@ -7,7 +7,127 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Portfolio Site</title>
   </head>
-  <body class="flex flex-col jutify-center items-center bg-blue-400">
-    <h1 class="text-white text-xl mt-4">Site Under Construction</h1>
+  <body class="flex flex-col jutify-center items-center bg-blue-400 space-y-6">
+    <!-- Nav Bar -->
+    <nav class="mb-10">
+      <div class="mt-8">
+        <ul class="space-y-6">
+          <li class="text-white"><a href="#about">About Me</a></li>
+          <li class="text-white"><a href="#skills">My Skills</a></li>
+          <li class="text-white"><a href="#projects">My Projects</a></li>
+          <li class="text-white"><a href="#contact">Contact Me</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="space-y-40">
+      <!-- Main Section - About Me -->
+      <div
+        class="flex flex-col items-center justify-center mx-8 space-y-6"
+        id="about">
+        <div>
+          <img
+            src="https://via.placeholder.com/200"
+            alt=""
+            class="rounded rounded-full" />
+        </div>
+        <div class="text-center space-y-4">
+          <h1 class="text-white">Hi, I'm Carlos!</h1>
+          <p class="text-white">
+            I'm a web developer from Chicago. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Necessitatibus dolor sequi fuga
+            cupiditate magni dolorem ratione ex, ut iste mollitia eius
+            temporibus rem in natus sunt. Corporis, officia numquam, rerum fugit
+            aliquid dolore, ipsam sunt veritatis aut vitae atque corrupti.
+          </p>
+        </div>
+      </div>
+
+      <!-- My Skills Section -->
+      <div
+        class="flex flex-col items-center justify-center mx-8 space-y-6"
+        id="skills">
+        <div>
+          <h2 class="text-center text-white text-2xl">My Technical Skills</h2>
+        </div>
+        <div class="">
+          <ul class="space-y-10">
+            <li class="flex items-center justify-center">
+              <img src="assets/logos/html-1.svg" alt="" class="w-1/4" />
+            </li>
+            <li class="flex items-center justify-center">
+              <img src="assets/logos/css-3.svg" alt="" class="w-1/4" />
+            </li>
+            <li class="flex items-center justify-center">
+              <img
+                src="assets/logos/logo-javascript.svg"
+                alt=""
+                class="w-1/4" />
+            </li>
+            <li class="flex items-center justify-center">
+              <img
+                src="assets/logos/tailwind-css-1-2.svg"
+                alt=""
+                class="w-1/4" />
+            </li>
+            <li class="flex items-center justify-center">
+              <img src="assets/logos/nodejs-1.svg" alt="" class="w-1/4" />
+            </li>
+            <li class="flex items-center justify-center">
+              <img src="assets/logos/react-2.svg" alt="" class="w-1/4" />
+            </li>
+            <li class="flex items-center justify-center">
+              <img src="assets/logos/postgresql.svg" alt="" class="w-1/4" />
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- My Projects Section -->
+      <div class="flex flex-col items-center justify-center mx-8 space-y-6">
+        <div>
+          <h2 class="text-center text-white text-2xl">My Projects</h2>
+        </div>
+        <div class="space-y-4">
+          <img
+            src="https://via.placeholder.com/200"
+            alt=""
+            class="border-4 border-white" />
+          <h3 class="text-white text-center text-xl">Family Tree</h3>
+        </div>
+        <div class="space-y-4">
+          <img
+            src="https://via.placeholder.com/200"
+            alt=""
+            class="border-4 border-white" />
+          <h3 class="text-white text-center text-xl">Restaurant Website</h3>
+        </div>
+        <div class="space-y-4">
+          <img
+            src="https://via.placeholder.com/200"
+            alt=""
+            class="border-4 border-white" />
+          <h3 class="text-white text-center text-xl">Movie Reviews</h3>
+        </div>
+      </div>
+    </div>
+    <!-- Contact Me Section -->
+    <div class="flex flex-col items-center justify-center mx-8 space-y-6">
+      <div>
+        <h2 class="text-center text-white text-2xl">Contact Me</h2>
+      </div>
+      <div>
+        <form action="" class="flex flex-col items-center">
+          <label for="Name">Name:</label>
+          <input type="text" />
+          <label for="Name">Email:</label>
+          <input type="text" />
+          <label for="Message">Message:</label>
+          <input type="text" name="" id="" />
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer></footer>
   </body>
 </html>
