@@ -5,11 +5,100 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.50.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap"
+      rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            arvo: ['Arvo', 'serif'],
+          },
+          extend: {},
+        },
+      };
+    </script>
+    <script>
+      function toggleNavbar(collapseID) {
+        document.getElementById(collapseID).classList.toggle('hidden');
+        document.getElementById(collapseID).classList.toggle('flex');
+      }
+    </script>
+
     <title>Portfolio Site</title>
   </head>
-  <body class="flex flex-col jutify-center items-center bg-blue-400 space-y-6">
+  <body class="bg-gradient-to-br from-sky-400 to-blue-800 font-[Arvo]">
+    <nav
+      class="relative flex flex-wrap items-center justify-between px-2 py-3 bg-blue-500 mb-3">
+      <div
+        class="container px-4 mx-auto flex flex-wrap items-center justify-between">
+        <div
+          class="w-full relative flex justify-between lg:w-auto px-4 lg:static lg:block lg:justify-start">
+          <a
+            class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
+            href="#pablo">
+            chucks.dev
+          </a>
+          <button
+            class="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+            type="button"
+            onclick="toggleNavbar('example-collapse-navbar')">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="lg:flex flex-grow items-center hidden"
+          id="example-collapse-navbar">
+          <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
+            <li class="nav-item">
+              <a
+                class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+                href="#skills">
+                <i class="text-lg leading-lg text-white opacity-75"></i
+                ><span class="ml-2">Skills</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+                href="#projects">
+                <i class="text-lg leading-lg text-white opacity-75"></i
+                ><span class="ml-2">Projects</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+                href="#contact">
+                <i class="text-lg leading-lg text-white opacity-75"></i
+                ><span class="ml-2">Contact Me</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     <!-- Nav Bar -->
-    <nav class="mb-10">
+    <!-- <nav class="mb-10">
       <div class="mt-8">
         <ul class="space-y-6">
           <li class="text-white"><a href="#about">About Me</a></li>
@@ -18,7 +107,7 @@
           <li class="text-white"><a href="#contact">Contact Me</a></li>
         </ul>
       </div>
-    </nav>
+    </nav> -->
     <div class="space-y-40">
       <!-- Main Section - About Me -->
       <div
@@ -31,8 +120,10 @@
             class="rounded rounded-full" />
         </div>
         <div class="text-center space-y-4">
-          <h1 class="text-white text-4xl">Hi, I'm Carlos!</h1>
-          <p class="text-white">
+          <h1 class="text-white text-4xl max-w-[500px] font-[Arvo]">
+            Hi, I'm Carlos!
+          </h1>
+          <p class="text-white max-w-[500px] md:text-xl">
             I'm a web developer from Chicago. Lorem ipsum dolor sit amet
             consectetur adipisicing elit. Necessitatibus dolor sequi fuga
             cupiditate magni dolorem ratione ex, ut iste mollitia eius
@@ -42,118 +133,167 @@
         </div>
       </div>
 
+      <div class="flex mx-auto border-2 border-b w-1/2 md:w-1/3"></div>
       <!-- My Skills Section -->
       <div
         class="flex flex-col items-center justify-center mx-8 space-y-6"
         id="skills">
         <div>
-          <h2 class="text-center text-white text-2xl">My Technical Skills</h2>
+          <h2 class="text-center text-white text-3xl md:font-bold">
+            My Technical Skills
+          </h2>
         </div>
-        <div class="">
-          <ul class="space-y-10">
+        <div class="pt-12">
+          <ul
+            class="flex flex-col md:flex-row space-y-16 md:space-y-0 md:max-w-[800px] md:space-x-8">
             <li class="flex items-center justify-center">
-              <img src="assets/logos/html-1.svg" alt="" class="w-1/4" />
+              <img
+                src="assets/logos/html-1.svg"
+                alt=""
+                class="w-1/4 md:w-3/4" />
             </li>
             <li class="flex items-center justify-center">
-              <img src="assets/logos/css-3.svg" alt="" class="w-1/4" />
+              <img src="assets/logos/css-3.svg" alt="" class="w-1/4 md:w-3/4" />
             </li>
             <li class="flex items-center justify-center">
               <img
                 src="assets/logos/logo-javascript.svg"
                 alt=""
-                class="w-1/4" />
+                class="w-1/4 md:w-3/4" />
             </li>
             <li class="flex items-center justify-center">
               <img
                 src="assets/logos/tailwind-css-1-2.svg"
                 alt=""
-                class="w-1/4" />
+                class="w-1/4 md:w-3/4" />
             </li>
             <li class="flex items-center justify-center">
-              <img src="assets/logos/nodejs-1.svg" alt="" class="w-1/4" />
+              <img
+                src="assets/logos/nodejs-1.svg"
+                alt=""
+                class="w-1/4 md:w-3/4" />
             </li>
             <li class="flex items-center justify-center">
-              <img src="assets/logos/react-2.svg" alt="" class="w-1/4" />
+              <img
+                src="assets/logos/react-2.svg"
+                alt=""
+                class="w-1/4 md:w-3/4" />
             </li>
             <li class="flex items-center justify-center">
-              <img src="assets/logos/postgresql.svg" alt="" class="w-1/4" />
+              <img
+                src="assets/logos/postgresql.svg"
+                alt=""
+                class="w-1/4 md:w-3/4" />
             </li>
           </ul>
         </div>
       </div>
-
+      <div class="flex mx-auto border-2 border-b w-1/2 md:w-1/3"></div>
       <!-- My Projects Section -->
       <div
         class="flex flex-col items-center justify-center mx-8 space-y-12"
         id="projects">
         <div>
-          <h2 class="text-center text-white text-2xl">My Projects</h2>
+          <h2 class="text-center text-white text-3xl md:font-bold">
+            My Projects
+          </h2>
         </div>
         <div class="space-y-6">
           <img
-            src="https://via.placeholder.com/200"
+            src="https://via.placeholder.com/300x200"
             alt=""
-            class="border-4 border-white hover:scale-105 shadow-2xl" />
-          <h3 class="text-white text-center text-xl">Family Tree</h3>
+            class="border-4 border-white hover:scale-105 shadow-2xl md:hidden" />
+          <img
+            src="https://via.placeholder.com/400x300"
+            alt=""
+            class="border-4 border-white hover:scale-105 shadow-2xl hidden md:block" />
+          <h3 class="text-white text-center text-xl md:text-4xl">
+            Family Tree
+          </h3>
         </div>
         <div class="space-y-4">
           <img
-            src="https://via.placeholder.com/200"
+            src="https://via.placeholder.com/300x200"
             alt=""
-            class="border-4 border-white hover:scale-105 shadow-2xl" />
-          <h3 class="text-white text-center text-xl">Restaurant Website</h3>
+            class="border-4 border-white hover:scale-105 shadow-2xl md:hidden" />
+          <img
+            src="https://via.placeholder.com/400x300"
+            alt=""
+            class="border-4 border-white hover:scale-105 shadow-2xl hidden md:block" />
+          <h3 class="text-white text-center text-xl md:text-4xl">
+            Restaurant Website
+          </h3>
         </div>
         <div class="space-y-4">
           <img
-            src="https://via.placeholder.com/200"
+            src="https://via.placeholder.com/300x200"
             alt=""
-            class="border-4 border-white hover:scale-105 shadow-2xl" />
-          <h3 class="text-white text-center text-xl">Movie Reviews</h3>
+            class="border-4 border-white hover:scale-105 shadow-2xl md:hidden" />
+          <img
+            src="https://via.placeholder.com/400x300"
+            alt=""
+            class="border-4 border-white hover:scale-105 shadow-2xl hidden md:block" />
+          <h3 class="text-white text-center text-xl md:text-4xl">
+            Movie Reviews
+          </h3>
         </div>
       </div>
-    </div>
-    <!-- Contact Me Section -->
-    <div
-      class="flex flex-col items-center justify-center mx-8 space-y-6"
-      id="contact">
-      <div>
-        <h2 class="text-center text-white text-4xl">Contact Me</h2>
-      </div>
-      <div>
-        <form action="" class="flex flex-col items-center">
-          <label for="Name" class="text-white">Name:</label>
-          <input type="text" />
-          <label for="Email" class="text-white">Email:</label>
-          <input type="text" />
-          <label for="Message" class="text-white">Message:</label>
-          <input type="text" name="" id="" />
-        </form>
+
+      <div class="flex mx-auto border-2 border-b w-1/2 md:w-1/3"></div>
+      <!-- Contact Me Section -->
+      <div
+        class="flex flex-col items-center justify-center mx-8 space-y-6 mt-12"
+        id="contact">
+        <div>
+          <h2 class="text-center text-white text-3xl md:font-bold">
+            Contact Me
+          </h2>
+        </div>
+        <div>
+          <form action="" class="flex flex-col items-center">
+            <label for="Name" class="text-white">Name:</label>
+            <input type="text" />
+            <label for="Email" class="text-white">Email:</label>
+            <input type="text" />
+            <label for="Message" class="text-white">Message:</label>
+            <input type="text" name="" id="" />
+          </form>
+        </div>
       </div>
     </div>
 
     <!-- Footer -->
-    <footer class="flex flex-col items-center justify-center">
-      <div class="flex flex-col justify-center items-center mt-20">
-        <ul class="space-y-4">
+    <footer class="flex flex-col items-center">
+      <div class="flex justify-between mt-20">
+        <ul class="flex flex-row justify-center items-center">
           <li class="">
-            <a href="#" class="flex flex-col items-center justify-center"
-              ><img src="assets/logos/twitter.svg" alt="" class="w-1/4"
+            <a href="#"
+              ><img
+                src="assets/logos/twitter.svg"
+                alt=""
+                class="w-1/4 md:w-1/5"
             /></a>
           </li>
           <li class="">
-            <a href="#" class="flex flex-col items-center justify-center"
-              ><img src="assets/logos/twitter.svg" alt="" class="w-1/4"
+            <a href="#"
+              ><img
+                src="assets/logos/twitter.svg"
+                alt=""
+                class="w-1/4 md:w-1/5"
             /></a>
           </li>
           <li class="">
-            <a href="#" class="flex flex-col items-center justify-center"
-              ><img src="assets/logos/linkedin.svg" alt="" class="w-1/4"
+            <a href="#"
+              ><img
+                src="assets/logos/linkedin.svg"
+                alt=""
+                class="w-1/4 md:w-1/5"
             /></a>
           </li>
         </ul>
       </div>
       <div>
-        <h3 class="text-white m-6">All rights reserved 2023</h3>
+        <h3 class="text-white m-6 mt-8">All rights reserved 2023</h3>
       </div>
     </footer>
   </body>
