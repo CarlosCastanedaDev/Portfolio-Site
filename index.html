@@ -108,7 +108,7 @@
         </ul>
       </div>
     </nav> -->
-    <div class="space-y-40">
+    <div class="space-y-40 mt-20">
       <!-- Main Section - About Me -->
       <div
         class="flex flex-col items-center justify-center mx-8 space-y-6"
@@ -249,51 +249,69 @@
             Contact Me
           </h2>
         </div>
-        <div>
-          <form action="" class="flex flex-col items-center">
+        <div class="w-4/5">
+          <form action="" class="flex flex-col items-center space-y-4">
             <label for="Name" class="text-white">Name:</label>
-            <input type="text" />
+            <input
+              type="text"
+              class="rounded w-3/4 md:w-[400px] text-white py-2" />
             <label for="Email" class="text-white">Email:</label>
-            <input type="text" />
+            <input
+              type="text"
+              class="rounded w-3/4 md:w-[400px] text-white py-2" />
             <label for="Message" class="text-white">Message:</label>
-            <input type="text" name="" id="" />
+            <input
+              type="text"
+              name=""
+              id=""
+              class="rounded w-3/4 md:w-[400px] text-white py-2" />
+            <div class="flex flex-row space-x-8 pt-8">
+              <input
+                type="submit"
+                class="border-2 rounded p-4 text-white hover:bg-white hover:text-black transition duration-300 shadow-2xl" />
+              <input
+                type="reset"
+                class="border-2 rounded p-4 text-white hover:bg-white hover:text-black transition duration-300 shadow-2xl" />
+            </div>
           </form>
         </div>
       </div>
     </div>
 
     <!-- Footer -->
-    <footer class="flex flex-col items-center">
-      <div class="flex justify-between mt-20">
-        <ul class="flex flex-row justify-center items-center">
-          <li class="">
-            <a href="#"
-              ><img
-                src="assets/logos/twitter.svg"
-                alt=""
-                class="w-1/4 md:w-1/5"
-            /></a>
-          </li>
-          <li class="">
-            <a href="#"
-              ><img
-                src="assets/logos/twitter.svg"
-                alt=""
-                class="w-1/4 md:w-1/5"
-            /></a>
-          </li>
-          <li class="">
-            <a href="#"
-              ><img
-                src="assets/logos/linkedin.svg"
-                alt=""
-                class="w-1/4 md:w-1/5"
-            /></a>
-          </li>
-        </ul>
+    <footer class="flex flex-col p-8">
+      <div class="flex justify-center mt-20 mb-12">
+        <a
+          href="http://www.github.com/CarlosCastanedaDev"
+          target="_blank"
+          class="inline-block">
+          <img src="assets/logos/gh.svg" class="mx-auto w-1/2 md:w-1/5"
+        /></a>
+
+        <a
+          href="http://www.twitter.com/NeminDev"
+          target="_blank"
+          class="inline-block"
+          ><img
+            src="assets/logos/twitter.svg"
+            alt=""
+            class="mx-auto w-1/2 md:w-1/5"
+        /></a>
+
+        <a
+          href="https://www.linkedin.com/in/carloscastanedadev/"
+          target="_blank"
+          class="inline-block"
+          ><img
+            src="assets/logos/linked.svg"
+            alt=""
+            class="mx-auto w-1/2 md:w-1/5"
+        /></a>
       </div>
       <div>
-        <h3 class="text-white m-6 mt-8">All rights reserved 2023</h3>
+        <h3 class="text-white m-6 mt-8 text-center">
+          All rights reserved 2023
+        </h3>
       </div>
     </footer>
   </body>
