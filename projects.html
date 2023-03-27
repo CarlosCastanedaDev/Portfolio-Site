@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.50.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap"
+      rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            arvo: ['Arvo', 'serif'],
+          },
+          extend: {},
+        },
+      };
+    </script>
+    <script>
+      function toggleNavbar(collapseID) {
+        document.getElementById(collapseID).classList.toggle('hidden');
+        document.getElementById(collapseID).classList.toggle('flex');
+      }
+    </script>
+    <title>Projects</title>
+  </head>
+  <body class="bg-gray-800 font-[Arvo]">
+    <!-- Nav Bar -->
+    <nav
+      class="relative flex flex-wrap items-center justify-between px-2 py-3 bg-blue-500 mb-3">
+      <div
+        class="container px-4 mx-auto flex flex-wrap items-center justify-between">
+        <div
+          class="w-full relative flex justify-between lg:w-auto px-4 lg:static lg:block lg:justify-start">
+          <a
+            class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
+            href="#pablo">
+            chucks.dev
+          </a>
+          <button
+            class="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+            type="button"
+            onclick="toggleNavbar('example-collapse-navbar')">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="lg:flex flex-grow items-center hidden"
+          id="example-collapse-navbar">
+          <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
+            <li class="nav-item">
+              <a
+                class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+                href="#skills">
+                <i class="text-lg leading-lg text-white opacity-75"></i
+                ><span class="ml-2">Skills</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+                href="#projects">
+                <i class="text-lg leading-lg text-white opacity-75"></i
+                ><span class="ml-2">Projects</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+                href="#contact">
+                <i class="text-lg leading-lg text-white opacity-75"></i
+                ><span class="ml-2">Contact Me</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- My Projects Section -->
+    <div
+      class="flex flex-col items-center justify-center mx-8 space-y-12 mt-20"
+      id="projects">
+      <div>
+        <h2 class="text-center text-white text-3xl md:font-bold">
+          My Projects
+        </h2>
+      </div>
+      <div class="space-y-6">
+        <a href="http://carloscastanedadev.github.io/calculator"
+          ><img
+            src="assets/calc_sm.png"
+            alt=""
+            class="border-4 border-white hover:scale-105 shadow-2xl md:hidden"
+        /></a>
+        <a href="http://carloscastanedadev.github.io/calculator"
+          ><img
+            src="assets/calc_md.png"
+            alt=""
+            class="border-4 border-white hover:scale-105 shadow-2xl hidden md:block"
+        /></a>
+        <h3 class="text-white text-center text-xl md:text-4xl">Calculator</h3>
+      </div>
+      <div class="space-y-6">
+        <a href="https://carloscastanedadev.github.io/digital-clock/"
+          ><img
+            src="assets/clock_sm.png"
+            alt=""
+            class="border-4 border-white hover:scale-105 shadow-2xl md:hidden"
+        /></a>
+        <a href="https://carloscastanedadev.github.io/digital-clock/"
+          ><img
+            src="assets/clock_md.png"
+            alt=""
+            class="border-4 border-white hover:scale-105 shadow-2xl hidden md:block"
+        /></a>
+        <h3 class="text-white text-center text-xl md:text-4xl">
+          Digital Clock
+        </h3>
+      </div>
+      <div class="space-y-6">
+        <a href="https://carloscastanedadev.github.io/1RM/"
+          ><img
+            src="assets/1rm_sm.png"
+            alt=""
+            class="border-4 border-white hover:scale-105 shadow-2xl md:hidden"
+        /></a>
+        <a href="https://carloscastanedadev.github.io/1RM/"
+          ><img
+            src="assets/1rm_md.png"
+            alt=""
+            class="border-4 border-white hover:scale-105 shadow-2xl hidden md:block"
+        /></a>
+        <h3 class="text-white text-center text-xl md:text-4xl">1 Rep Max</h3>
+      </div>
+      <div class="space-y-6">
+        <a href="http://carloscastanedadev.github.io/calculator"
+          ><img
+            src="https://via.placeholder.com/300x200"
+            alt=""
+            class="border-4 border-white hover:scale-105 shadow-2xl md:hidden"
+        /></a>
+        <a href="http://carloscastanedadev.github.io/calculator"
+          ><img
+            src="https://via.placeholder.com/400x300"
+            alt=""
+            class="border-4 border-white hover:scale-105 shadow-2xl hidden md:block"
+        /></a>
+        <h3 class="text-white text-center text-xl md:text-4xl">Calculator</h3>
+      </div>
+    </div>
+  </body>
+</html>
