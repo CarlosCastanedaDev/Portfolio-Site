@@ -1,2 +1,3 @@
 # Portfolio-Site
-Chucks.dev Portfolio SIte
+
+Check it out: https://www.chucks.dev
